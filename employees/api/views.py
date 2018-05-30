@@ -4,21 +4,30 @@ from rest_framework.response import Response
 from rest_framework import viewsets
 from rest_framework import status
 
-from .serializers import HrEmployeeSerializer, EmployeeSerializer
-from .permissions import IsStaffOrReadOnly
+from .serializers import EmployeeSerializer, OwnerSerializer
+from .permissions import IsStaff, IsOwner
 from ..models import Employee
 
 
 class EmployeeViewSet(viewsets.ViewSet):
     queryset = Employee.objects.all()
 
+    def get_permissions(self):
+        if self.action in ['create', 'update', 'destroy']:
+            permission_classes = [IsStaff]
+        elif self.action in ['partial_update']:
+            permission_classes = [IsOwner]
+        else:
+            permission_classes = []
+        return [permission() for permission in permission_classes]
+
     def list(self, request):
         queryset = Employee.objects.all()
-        serializer = HrEmployeeSerializer(queryset, many=True)
+        serializer = EmployeeSerializer(queryset, many=True)
         return Response(serializer.data)
 
     def create(self, request):
-        serializer = HrEmployeeSerializer(data=request.data)
+        serializer = EmployeeSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -27,13 +36,13 @@ class EmployeeViewSet(viewsets.ViewSet):
     def retrieve(self, request, pk=None):
         queryset = Employee.objects.all()
         employee = get_object_or_404(queryset, pk=pk)
-        serializer = HrEmployeeSerializer(employee)
+        serializer = EmployeeSerializer(employee)
         return Response(serializer.data)
 
     def update(self, request, pk=None):
         queryset = Employee.objects.all()
         employee = get_object_or_404(queryset, pk=pk)
-        serializer = HrEmployeeSerializer(employee, data=request.data)
+        serializer = EmployeeSerializer(employee, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -42,7 +51,7 @@ class EmployeeViewSet(viewsets.ViewSet):
     def partial_update(self, request, pk=None):
         queryset = Employee.objects.all()
         employee = get_object_or_404(queryset, pk=pk)
-        serializer = EmployeeSerializer(employee, data=request.data)
+        serializer = OwnerSerializer(employee, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
