@@ -25,9 +25,7 @@ $ python3 manage.py runserver
 *   /api/employees/:id/ PATCH partial update (only for owner)  
 *   /api/employees/:id/ DELETE  delete employee (only for staff)  
 
-
-
-## Usage with curl:  
+## Usage with curl  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create new employee with  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; username "NewUser"  
