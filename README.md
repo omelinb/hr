@@ -19,11 +19,11 @@ $ python3 manage.py runserver
 
 ## Endpoints  
 *   /api/employees/ GET list of employees
-*   /api/employees/ POST  create employee (only for staff)  
+*   /api/employees/ POST  create employee (staff only)  
 *   /api/employees/:id/ GET retrieve employee  
-*   /api/employees/:id/ PUT update employee (only for staff)  
-*   /api/employees/:id/ PATCH partial update (only for owner)  
-*   /api/employees/:id/ DELETE  delete employee (only for staff)  
+*   /api/employees/:id/ PUT update employee (staff only)  
+*   /api/employees/:id/ PATCH partial update (owner only)  
+*   /api/employees/:id/ DELETE  delete employee (staff only)  
 
 ## Usage with curl  
 
