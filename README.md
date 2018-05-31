@@ -27,12 +27,15 @@
 
 ### UI  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creating new employee after signing in as HRUser or admin using UI:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "username": "username",  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "rank": "[J/M/S/H]",  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "department": "[IT/HR/BU/DG]",  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "email": "required email for getting password"  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
+
+```json
+{  
+   "username": "username",  
+   "rank": "[J/M/S/H]",  
+   "department": "[IT/HR/BU/DG]",  
+   "email": "required email for getting password"  
+ }
+ ```  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After creating employee will get email with login and password.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each employee with department HR will get staff status.
