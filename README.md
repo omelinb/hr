@@ -11,12 +11,12 @@
 *  login: Buyer, password: CGP7RNGG  
 
 ## Endpoints:
-*   http://localhost:8000/api/employees/ GET list of employees
-*   http://localhost:8000/api/employees/ POST  create employee (only for staff)  
-*   http://localhost:8000/api/employees/:id/ GET retrieve employee  
-*   http://localhost:8000/api/employees/:id/ PUT update employee (only for staff)  
-*   http://localhost:8000/api/employees/:id/ PATCH partial update (only for owner)  
-*   http://localhost:8000/api/employees/:id/ DELETE  delete employee (only for staff)  
+*   /api/employees/ GET list of employees
+*   /api/employees/ POST  create employee (only for staff)  
+*   /api/employees/:id/ GET retrieve employee  
+*   /api/employees/:id/ PUT update employee (only for staff)  
+*   /api/employees/:id/ PATCH partial update (only for owner)  
+*   /api/employees/:id/ DELETE  delete employee (only for staff)  
 
 ## Usage:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pip install -r requirments.txt  
