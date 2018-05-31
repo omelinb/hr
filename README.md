@@ -21,7 +21,7 @@
 *  login: HRUser, password: LDJ7LZ59
 *  login: Buyer, password: CGP7RNGG
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After signing in like HRUser or admin you can create new employees:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creating new employee after signing in as HRUser or admin:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "username": "username",  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "rank": "[J/M/S/H]",  
@@ -29,4 +29,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "email": "required email for getting password"  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After creating employee will get email with password. 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each employee from HR department will get staff status.
