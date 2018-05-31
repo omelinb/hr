@@ -3,8 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 from django.db import models
 
-import string
-import random
+import uuid
 
 
 class Employee(AbstractUser):
@@ -31,7 +30,7 @@ class Employee(AbstractUser):
         verbose_name_plural = 'Employees'
 
     def set_temporary_password(self):
-        password = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(8))
+        password = str(uuid.uuid4())
         self.set_password(password)
         MESSAGE = """
             Glad to see you in our team!
