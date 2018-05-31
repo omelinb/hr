@@ -1,5 +1,5 @@
 ## Description    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application for creating, retrieving, listing and deleting employees inside company.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application for creating, retrieving, listing and deleting employees inside company.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After creating employee will get email with login and password.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each employee with department HR will get staff status.
   
