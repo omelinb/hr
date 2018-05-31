@@ -35,7 +35,8 @@
 ## Usage with curl:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl -u HRUser -d "username=NewUser&rank=S&department=DG&email=djangotestmail4@gmail.com" -X POST http://localhost/api/employees/  - Create new employee.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl http://localhost/api/employees/ - Get list of employees.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl http://localhost/api/employees/ - Get list of employees.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl http://localhost/api/employees/:id/ - Retrieve employee data.
 
 
 
