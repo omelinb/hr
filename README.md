@@ -29,5 +29,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "email": "required email for getting password"  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After creating employee will get email with password. 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each employee from HR department will get staff status.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After creating employee will get email with login and password.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each employee with department HR will get staff status.
+
+## Usage with curl:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl -u HRUser -d "username=NewUser&rank=S&department=DG&email=djangotestmail4@gmail.com" -X POST http://localhost:8000/api/employees/  - Create new employee.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl http://localhost:8000/api/employees/ - Get list of employees.
+
+
+
+
